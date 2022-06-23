@@ -7,6 +7,7 @@ export const Container = styled.div`
     left:70%;
     transform: translate(-50%, -50%);
     width: 20rem;
+    border-radius: 10px;
     }
 
     #segunda{
@@ -15,6 +16,7 @@ export const Container = styled.div`
     left:30%;
     transform: translate(-50%, -50%);
     width: 20rem;
+    border-radius: 10px;
     }
 
     button {
@@ -22,6 +24,12 @@ export const Container = styled.div`
     top:75%;
     left:51%;
     transform: translate(-50%, -50%);
-    
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgba(255, 255, 255, 0.945);
+    width: 100px;
+    height: 38px;
 }
 `

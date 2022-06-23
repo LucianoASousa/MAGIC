@@ -17,8 +17,11 @@ export function PlayButton() {
 
     const [card, setCard] = useState();
     const [card2, setCard2] = useState();
+    const [busy, setBusy] = useState(false);
+
 
     const fetch = async () => {
+        
         const response = await api.get("/cards/random")
         const card = response.data
         const types = card.type_line.split(' — ')
@@ -29,6 +32,8 @@ export function PlayButton() {
             && types[0] !== LegalityTypes.INSTANT ) {
             setCard(card.image_uris.normal)
             fetch2()
+
+            
             return card
         }
 
@@ -37,6 +42,8 @@ export function PlayButton() {
     }
     
     const fetch2 = async () => {
+        setBusy(true);
+
         const response = await api.get("/cards/random")
         const card = response.data
         const types = card.type_line.split(' — ')
@@ -46,6 +53,8 @@ export function PlayButton() {
             && types[0] !== LegalityTypes.LAND 
             && types[0] !== LegalityTypes.INSTANT ) {
             setCard2(card.image_uris.normal)
+
+            setBusy(false);
             return card
         }
 
@@ -53,9 +62,12 @@ export function PlayButton() {
         console.log("Fetching another card")
     }
 
-    
-    
-    
+    if(busy) {
+        return (
+            'carregando...'
+        )    
+    }
+
     return(
         <Container>
             <img id="primeira" src={card} />
