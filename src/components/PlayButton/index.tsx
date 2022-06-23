@@ -66,7 +66,7 @@ export function PlayButton() {
             return (
                 <Container>
                     <div id="carregando">
-                        'carregando...'
+                        <span class="icon"></span>
                     </div>
                 </Container>
             )    

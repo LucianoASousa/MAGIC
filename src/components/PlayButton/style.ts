@@ -8,7 +8,7 @@ export const Container = styled.div`
     left:70%;
     transform: translate(-50%, -50%);
     width: 20rem;
-    border-radius: 10px;
+    border-radius: 15px;
     }
 
     #segunda{
@@ -17,18 +17,41 @@ export const Container = styled.div`
     left:30%;
     transform: translate(-50%, -50%);
     width: 20rem;
-    border-radius: 10px;
+    border-radius: 15px;
+    }
+        
+    .icon {
+    position: absolute;
+    top:75%;
+    left:51%;
+    transition-delay: .5s;
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid #BF3326;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite;
+    margin-top: -24px;
+    margin-left: -23px;
     }
 
-    #carregando {
-        font-family: 'magic', cursive;
-        position:absolute; 
-        top:83%;
-        left:43%;
-        color: white;
-        font-weight: bold;
-        font-size: 50px;
+    @keyframes spin {
+    
+    0%{
+        transform: rotate(0);
     }
+    50% {
+        transform: rotate(180deg);
+        border-top-color: #D96E30;
+        border-bottom-color: #F2CA80;
+        border-right-color: transparent;
+        border-left-color: transparent;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
     button {
     position:absolute; 
@@ -38,9 +61,8 @@ export const Container = styled.div`
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #BF3326;
     color:rgba(255, 255, 255, 0.945);
     width: 100px;
     height: 38px;
 }
-`
