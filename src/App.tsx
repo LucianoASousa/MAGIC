@@ -1,11 +1,8 @@
 import { PlayButton } from "./components/PlayButton"
-
 function App() {
   
   return (
-    <>
     <PlayButton/>
-    </>
   )
 }
 
