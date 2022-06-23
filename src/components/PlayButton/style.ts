@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    
     #primeira{
     position:absolute; 
     top:50%;
@@ -17,6 +18,16 @@ export const Container = styled.div`
     transform: translate(-50%, -50%);
     width: 20rem;
     border-radius: 10px;
+    }
+
+    #carregando {
+        font-family: 'magic', cursive;
+        position:absolute; 
+        top:83%;
+        left:43%;
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
     }
 
     button {

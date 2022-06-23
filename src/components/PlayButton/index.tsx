@@ -62,11 +62,15 @@ export function PlayButton() {
         console.log("Fetching another card")
     }
 
-    if(busy) {
-        return (
-            'carregando...'
-        )    
-    }
+        if(busy) {
+            return (
+                <Container>
+                    <div id="carregando">
+                        'carregando...'
+                    </div>
+                </Container>
+            )    
+        }
 
     return(
         <Container>
