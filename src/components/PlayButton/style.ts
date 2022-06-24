@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     
-    #primeira{
+    #First {
     position:absolute; 
     top:50%;
     left:70%;
@@ -11,7 +11,7 @@ export const Container = styled.div`
     border-radius: 15px;
     }
 
-    #segunda{
+    #Second {
     position:absolute; 
     top:50%;
     left:30%;
