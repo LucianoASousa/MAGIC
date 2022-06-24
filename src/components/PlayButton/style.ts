@@ -56,14 +56,24 @@ export const Container = styled.div`
     button {
     position:absolute; 
     top:75%;
-    left:51%;
+    left:51.25%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     border: none;
+    background: transparent;
     border-radius: 4px;
-    background-color: #BF3326;
-    color:rgba(255, 255, 255, 0.945);
     width: 100px;
     height: 38px;
+    display: block;
+
+    img{
+    width: 100%;
+    }
+        
+    &:hover {
+        img {
+            filter: brightness(0.8);
+        };
+    }
 }
 `

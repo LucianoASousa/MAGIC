@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../../services/api";
 import { Container } from "./style";
+import ImgButton from "../../assets/button.png";
 
 export enum LegalityGames {
     LEGAL = "legal",
@@ -84,7 +85,7 @@ export function PlayButton() {
             <img id="Second" src={card2} />
             <div>
                 <button type="button" onClick={fetch}>
-                    Play
+                    <img src={ImgButton} />
                 </button>
             </div> 
         </Container>
