@@ -12,6 +12,8 @@ export enum LegalityTypes {
     SORCERY = "Sorcery",
     INSTANT = "Instant",
     LAND = "Land",
+    SNOWLAND = "Snow Land",
+    BASICLAND = "Basic Land",
 }
 
 export function PlayButton() {
@@ -34,11 +36,13 @@ export function PlayButton() {
 
         if( types[0] !== LegalityTypes.SORCERY 
             && types[0] !== LegalityTypes.LAND 
-            && types[0] !== LegalityTypes.INSTANT ) {
+            && types[0] !== LegalityTypes.INSTANT
+            && types[0] !== LegalityTypes.SNOWLAND
+            && types[0] !== LegalityTypes.BASICLAND
+            ){
             setCard(card.image_uris.normal)
             fetch2()
 
-            
             return card
         }
 
@@ -59,7 +63,10 @@ export function PlayButton() {
 
         if(types[0] !== LegalityTypes.SORCERY 
             && types[0] !== LegalityTypes.LAND 
-            && types[0] !== LegalityTypes.INSTANT ) {
+            && types[0] !== LegalityTypes.INSTANT
+            && types[0] !== LegalityTypes.SNOWLAND
+            && types[0] !== LegalityTypes.BASICLAND
+            ){
             setCard2(card.image_uris.normal)
 
             setBusy(false);
