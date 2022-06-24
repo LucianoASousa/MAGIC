@@ -29,7 +29,7 @@ export function PlayButton() {
             params: {
               q: 'legal:historic',
             }
-          })
+        })
 
         const card = response.data
         const types = card.type_line.split(' — ')
@@ -40,7 +40,7 @@ export function PlayButton() {
             && types[0] !== LegalityTypes.SNOWLAND
             && types[0] !== LegalityTypes.BASICLAND
             ){
-            setCard(card.image_uris.normal)
+            setCard(card.image_uris.normal ?? card.image_uris.png)
             fetch2()
 
             return card
@@ -56,7 +56,7 @@ export function PlayButton() {
             params: {
               q: 'legal:historic',
             }
-          })
+        })
 
         const card = response.data
         const types = card.type_line.split(' — ')
@@ -67,7 +67,8 @@ export function PlayButton() {
             && types[0] !== LegalityTypes.SNOWLAND
             && types[0] !== LegalityTypes.BASICLAND
             ){
-            setCard2(card.image_uris.normal)
+            setCard2(card.image_uris.normal ?? card.image_uris.png)
+            console.log(card)
 
             setBusy(false);
             return card

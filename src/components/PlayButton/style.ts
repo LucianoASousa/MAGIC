@@ -27,7 +27,7 @@ export const Container = styled.div`
     transition-delay: .5s;
     width: 3rem;
     height: 3rem;
-    border: 5px solid #BF3326;
+    border: 5px solid #3c3830;
     border-top-color: transparent;
     border-bottom-color: transparent;
     border-radius: 50%;
@@ -43,7 +43,7 @@ export const Container = styled.div`
     }
     50% {
         transform: rotate(180deg);
-        border-top-color: #D96E30;
+        border-top-color: #a28974;
         border-bottom-color: #F2CA80;
         border-right-color: transparent;
         border-left-color: transparent;
