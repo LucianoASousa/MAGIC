@@ -9,11 +9,8 @@ export enum LegalityGames {
 }
 
 export enum LegalityTypes {
-    SORCERY = "Sorcery",
-    INSTANT = "Instant",
-    LAND = "Land",
-    SNOWLAND = "Snow Land",
-    BASICLAND = "Basic Land",
+    LEGENDARYCREATURE = "Legendary Creature",
+    LEGENDARYPLANESWALKER = "Legendary Planeswalker",
 }
 
 export function PlayButton() {
@@ -34,11 +31,8 @@ export function PlayButton() {
         const card = response.data
         const types = card.type_line.split(' — ')
 
-        if( types[0] !== LegalityTypes.SORCERY 
-            && types[0] !== LegalityTypes.LAND 
-            && types[0] !== LegalityTypes.INSTANT
-            && types[0] !== LegalityTypes.SNOWLAND
-            && types[0] !== LegalityTypes.BASICLAND
+        if( types[0] == LegalityTypes.LEGENDARYPLANESWALKER 
+            || types[0] == LegalityTypes.LEGENDARYCREATURE
             ){
             setCard(card.image_uris.normal ?? card.image_uris.png)
             fetch2()
@@ -61,11 +55,8 @@ export function PlayButton() {
         const card = response.data
         const types = card.type_line.split(' — ')
 
-        if(types[0] !== LegalityTypes.SORCERY 
-            && types[0] !== LegalityTypes.LAND 
-            && types[0] !== LegalityTypes.INSTANT
-            && types[0] !== LegalityTypes.SNOWLAND
-            && types[0] !== LegalityTypes.BASICLAND
+        if( types[0] == LegalityTypes.LEGENDARYPLANESWALKER
+            || types[0] == LegalityTypes.LEGENDARYCREATURE
             ){
             setCard2(card.image_uris.normal ?? card.image_uris.png)
             console.log(card)
