@@ -1,8 +1,9 @@
-import { PlayButton } from "./components/PlayButton"
+import { Dashboard } from "./components/Dashbord"
+
 function App() {
   
   return (
-    <PlayButton/>
+    <Dashboard/>
   )
 }
 

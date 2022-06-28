@@ -1,7 +1,6 @@
 import { useState } from "react";
 import api from "../../services/api";
 import { Container } from "./style";
-import ImgButton from "../../assets/button.png";
 
 export enum LegalityGames {
     LEGAL = "legal",
@@ -59,7 +58,6 @@ export function PlayButton() {
             || types[0] == LegalityTypes.LEGENDARYCREATURE
             ){
             setCard2(card.image_uris.normal ?? card.image_uris.png)
-            console.log(card)
 
             setBusy(false);
             return card
@@ -84,7 +82,7 @@ export function PlayButton() {
             <img id="Second" src={card2} />
             <div>
                 <button type="button" onClick={fetch}>
-                    <img src={ImgButton} />
+                    <img src="src/assets/imgs/button.png" />
                 </button>
             </div> 
         </Container>

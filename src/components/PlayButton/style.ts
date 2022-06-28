@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url('src/assets/imgs/MAGICBACKGROUND.jpg');
+    background-size: cover;
     
     #First {
     position:absolute; 
