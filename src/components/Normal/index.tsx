@@ -8,11 +8,17 @@ export enum LegalityGames {
 }
 
 export enum LegalityTypes {
-    LEGENDARYCREATURE = "Legendary Creature",
-    LEGENDARYPLANESWALKER = "Legendary Planeswalker",
+    SORCERY = "Sorcery",
+    INSTANT = "Instant",
+    LEGENDARYSORCERY = "Legendary Sorcery",
+    SNOWSORCERY = "Snow Sorcery",
+    LAND = "Land",
+    SNOWLAND = "Snow Land",
+    LEGENDARYLAND = "Legendary Land",
+    BASICSNOWLAND = "Basic Snow Land",
 }
 
-export function PlayButton() {
+export function Normal() {
 
     const [card, setCard] = useState();
     const [card2, setCard2] = useState();
@@ -20,18 +26,26 @@ export function PlayButton() {
 
 
     const fetch = async () => {
-        
+        setBusy(true);
+
         const response = await api.get("/cards/random",{
             params: {
               q: 'legal:historic',
+
             }
         })
 
         const card = response.data
         const types = card.type_line.split(' — ')
 
-        if( types[0] == LegalityTypes.LEGENDARYPLANESWALKER 
-            || types[0] == LegalityTypes.LEGENDARYCREATURE
+        if(    types[0] != LegalityTypes.SORCERY
+            && types[0] != LegalityTypes.INSTANT
+            && types[0] != LegalityTypes.LEGENDARYSORCERY
+            && types[0] != LegalityTypes.SNOWSORCERY
+            && types[0] != LegalityTypes.LAND
+            && types[0] != LegalityTypes.SNOWLAND
+            && types[0] != LegalityTypes.LEGENDARYLAND
+            && types[0] != LegalityTypes.BASICSNOWLAND
             ){
             setCard(card.image_uris.normal ?? card.image_uris.png)
             fetch2()
@@ -43,7 +57,6 @@ export function PlayButton() {
     }
     
     const fetch2 = async () => {
-        setBusy(true);
 
         const response = await api.get("/cards/random",{
             params: {
@@ -54,8 +67,14 @@ export function PlayButton() {
         const card = response.data
         const types = card.type_line.split(' — ')
 
-        if( types[0] == LegalityTypes.LEGENDARYPLANESWALKER
-            || types[0] == LegalityTypes.LEGENDARYCREATURE
+        if(    types[0] != LegalityTypes.SORCERY
+            && types[0] != LegalityTypes.INSTANT
+            && types[0] != LegalityTypes.LEGENDARYSORCERY
+            && types[0] != LegalityTypes.SNOWSORCERY
+            && types[0] != LegalityTypes.LAND
+            && types[0] != LegalityTypes.SNOWLAND
+            && types[0] != LegalityTypes.LEGENDARYLAND
+            && types[0] != LegalityTypes.BASICSNOWLAND
             ){
             setCard2(card.image_uris.normal ?? card.image_uris.png)
 
