@@ -6,7 +6,7 @@ export const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url('src/assets/imgs/MAGICBACKGROUND.jpg');
+    background: url('src/assets/imgs/NormalBACKGROUND.jpg');
     background-size: cover;
     
     #First {
