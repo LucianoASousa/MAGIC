@@ -1,14 +1,12 @@
 {
-  "homepage": "https://lucianoasousa.github.io/MAGIC",
+  "homepage": "/github-page",
   "name": "magic-teste",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.27.2",
