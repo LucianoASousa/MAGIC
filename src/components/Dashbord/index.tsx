@@ -4,8 +4,8 @@ import { Container } from "./style";
 export function Dashboard() {
     return(
         <Container>
-        <Link to="/Legendary"><img src="https://i.pinimg.com/564x/cc/9b/30/cc9b300866e9525103b70c84c5b8e7e4.jpg" id="Legendary" /></Link>
-        <Link to="/Normal"><img src="https://mcdn.wallpapersafari.com/medium/43/47/Kw0eD4.png" id="Normal"/></Link>
+        <Link to="/Legendary"><img src="https://github.com/LucianoASousa/MAGIC/blob/main/src/assets/imgs/Legendary.png?raw=true" id="Legendary" /></Link>
+        <Link to="/Normal"><img src="https://github.com/LucianoASousa/MAGIC/blob/main/src/assets/imgs/Normal.jpg?raw=true" id="Normal"/></Link>
         </Container>
     )
 }
