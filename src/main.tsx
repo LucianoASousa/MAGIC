@@ -8,7 +8,7 @@ import { Normal } from './components/Normal'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="Legendary" element={<Legendary />} />

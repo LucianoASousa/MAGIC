@@ -6,7 +6,7 @@ export const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url('src/assets/imgs/MAGICBACKGROUND.jpg');
+    background: url('https://media.magic.wizards.com/images/featured/EN_Ugin_SoulSummons.jpg');
     background-size: cover;
     
     #First {
