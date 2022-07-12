@@ -1,5 +1,5 @@
 {
-  "homepage": "https://LucianoASousa.github.io/MAGIC",
+  "homepage": "http://LucianoASousa.github.io/MAGIC",
   "name": "magic-teste",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
