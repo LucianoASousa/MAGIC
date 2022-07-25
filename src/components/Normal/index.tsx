@@ -101,7 +101,7 @@ export function Normal() {
             <img id="Second" src={card2} />
             <div>
                 <button type="button" onClick={fetch}>
-                    <img src="https://github.com/LucianoASousa/MAGIC/blob/main/src/assets/imgs/button.png" />
+                    <img src="src/assets/imgs/button.png" />
                 </button>
             </div> 
         </Container>

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import backgroundNormal from 'src/assets/imgs/NormalBACKGROUND.jpg'
 
 export const Container = styled.div`
     padding: 0;
@@ -7,7 +6,7 @@ export const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url(https://github.com/LucianoASousa/MAGIC/blob/main/src/assets/imgs/NormalBACKGROUND.jpg);
+    background: url('src/assets/imgs/NormalBACKGROUND.jpg');
     background-size: cover;
     
     #First {
