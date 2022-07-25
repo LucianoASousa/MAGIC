@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path="/MAGIC" element={<App />} />
+        <Route path="" element={<App />} />
         <Route path="Legendary" element={<Legendary />} />
         <Route path="Normal" element={<Normal />} />
       </Routes>
