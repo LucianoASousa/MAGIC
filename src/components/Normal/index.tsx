@@ -47,7 +47,7 @@ export function Normal() {
             && types[0] != LegalityTypes.LEGENDARYLAND
             && types[0] != LegalityTypes.BASICSNOWLAND
             ){
-            setCard(card.image_uris.normal ?? card.image_uris.png)
+            setCard(card.image_uris.normal || card.image_uris.png)
             fetch2()
 
             return card
@@ -76,7 +76,7 @@ export function Normal() {
             && types[0] != LegalityTypes.LEGENDARYLAND
             && types[0] != LegalityTypes.BASICSNOWLAND
             ){
-            setCard2(card.image_uris.normal ?? card.image_uris.png)
+            setCard2(card.image_uris.normal || card.image_uris.png)
 
             setBusy(false);
             return card
