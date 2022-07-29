@@ -36,7 +36,7 @@ export function Legendary() {
             || types[0] == LegalityTypes.LEGENDARYCREATURE
             || types[0] == LegalityTypes.LEGENDARYARTIFACT
             ){
-            setCard(card.image_uris.normal || card.image_uris.large)
+            setCard(card.image_uris.normal ?? card.image_uris.large)
             fetch2()
 
             return card
