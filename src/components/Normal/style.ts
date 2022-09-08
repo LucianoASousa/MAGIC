@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ImgNBackground from "../../assets/imgs/NormalBACKGROUND.jpg";
 
 export const Container = styled.div`
     padding: 0;
@@ -6,7 +7,8 @@ export const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: url('https://github.com/LucianoASousa/MAGIC/blob/main/src/assets/imgs/NormalBACKGROUND.jpg?raw=true');
+    background-color: black;
+    background: url(${ImgNBackground});
     background-size: cover;
     
     #First {
@@ -16,6 +18,7 @@ export const Container = styled.div`
     transform: translate(-50%, -50%);
     width: 20rem;
     border-radius: 15px;
+    animation: hey 3s linear;
     }
 
     #Second {
@@ -25,38 +28,43 @@ export const Container = styled.div`
     transform: translate(-50%, -50%);
     width: 20rem;
     border-radius: 15px;
+    animation: hey 3s linear;
+    }
+
+    @keyframes hey {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
     }
         
-    .icon {
-    position: absolute;
+    #Loading {
+    position:absolute; 
     top:75%;
-    left:51%;
-    transition-delay: .5s;
-    width: 3rem;
-    height: 3rem;
-    border: 5px solid #3c3830;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s infinite;
-    margin-top: -24px;
-    margin-left: -23px;
+    left:51.25%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    width: 100px;
+    height: 38px;
+    display: block;
+
+     img{
+        width: 100%;
+        animation: spin 2s linear infinite;
+     }
     }
 
     @keyframes spin {
-    
     0%{
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(180deg);
-        border-top-color: #a28974;
-        border-bottom-color: #F2CA80;
-        border-right-color: transparent;
-        border-left-color: transparent;
+        transform: rotatey(0deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotatey(360deg);
     }
 }
 
